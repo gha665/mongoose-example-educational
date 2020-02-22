@@ -34,6 +34,7 @@ function showCats() {
   //List all cats
   Cat.find()
     .then(catsFromDB => {
+      // catsFromDB is an array of Cat instances
       catsFromDB.forEach(oneCat => console.log(`--> cat: ${oneCat.name}`))
     })
     .catch(err => console.log(`Error occurred during getting cats from DB: ${err}`));
